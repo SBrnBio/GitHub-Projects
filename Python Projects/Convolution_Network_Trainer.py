@@ -1,5 +1,5 @@
 '''
-SethBrnBio
+SBrnBio
 Convolution Network
 
 Modified off of the following code: https://github.com/tflearn/tflearn/blob/master/examples/images/convnet_cifar10.py

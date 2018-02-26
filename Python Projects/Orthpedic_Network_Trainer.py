@@ -57,7 +57,7 @@ model.load('model/orthopedic_model_2C.tflearn')
 
 # Abnormal
 John = [63.0278175,22.55258597,39.60911701,40.47523153,98.67291675,-0.254399986]
-#normal
+# Normal
 Jake = [59.16761171,14.56274875,43.19915768,44.60486296,121.0356423,2.830504124]
 
 pred = model.predict([John, Jake])

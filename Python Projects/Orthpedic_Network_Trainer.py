@@ -42,7 +42,9 @@ model = tflearn.DNN(net, checkpoint_path='model/orthopedic_model_2C.tflearn',
 #--------------------------------------------
 #### Train model for N epochs
 #--------------------------------------------
-model.fit(data, labels, n_epoch=30,  run_id='oprthopedic_model_2C', 
+#model.load('model/orthopedic_model_2C.tflearn')
+
+model.fit(data, labels, n_epoch=100,  run_id='oprthopedic_model_2C', 
           batch_size=10, show_metric=True)
 
 #--------------------------------------------
@@ -56,9 +58,9 @@ model.load('model/orthopedic_model_2C.tflearn')
 #--------------------------------------------
 
 # Abnormal
-John = [63.0278175,22.55258597,39.60911701,40.47523153,98.67291675,-0.254399986]
-# Normal
-Jake = [59.16761171,14.56274875,43.19915768,44.60486296,121.0356423,2.830504124]
+John = [62.01,21.02,38.06,42.47,100.67,0.27]
+#normal
+Jake = [60.16,12.56,45.20,42.60,119.03,3.83]
 
 pred = model.predict([John, Jake])
 print("\n")

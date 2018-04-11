@@ -44,24 +44,24 @@ model = tflearn.DNN(net, checkpoint_path='model/orthopedic_model_3C.tflearn',
 #--------------------------------------------
 model.load('model/orthopedic_model_3C.tflearn')
 
-#model.fit(data, labels, n_epoch=100,  run_id='oprthopedic_model_3C', 
-#          batch_size=10, show_metric=True)
+model.fit(data, labels, n_epoch=100,  run_id='oprthopedic_model_3C', 
+          batch_size=10, show_metric=True)
 
 #--------------------------------------------
 #### Saving and loading the model
 #--------------------------------------------
-#model.save('model/orthopedic_model_3C.tflearn')
-#model.load('model/orthopedic_model_3C.tflearn')
+model.save('model/orthopedic_model_3C.tflearn')
+model.load('model/orthopedic_model_3C.tflearn')
 
 #--------------------------------------------
 #### Predicting with the model
 #--------------------------------------------
 
 #Hernia
-John = [36.68635286,5.010884121,41.9487509,31.67546874,84.24141517,0.664437117]
+John = [37.686,4.010,42.948,30.675,85.241,1.664]
 
 #Spondylolisthesis
-Jake = [65.53600255,24.15748726,45.77516991,41.3785153,136.4403015,16.37808564]
+Jake = [66.536,23.157,46.775,40.378,137.440,15.378]
 
 pred = model.predict([John, Jake])
 print("\n")
